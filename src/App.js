@@ -1,24 +1,23 @@
-import logo from './logo.svg';
+//ESTILO Y RECUROS GRÁFICOS
 import './App.css';
+
+
+//MODULOS
+import Cabecera from "./Cabecera"
+import Footer from "./Footer"
+import Peliculas from "./Peliculas"
+
+
+//JS SERVICIO
+import videoclub from "./videoclub"
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+  <>
+   <Cabecera />
+   <Peliculas videoclubProps={videoclub}/>
+   <Footer/>
+  </>
   );
 }
 
